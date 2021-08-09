@@ -1,0 +1,19 @@
+.loader-bars {
+    width:35px;
+    height:50px;
+    display: none;
+    --c:linear-gradient(#d9d9d9, #d9d9d9);
+    background: 
+        var(--c) 0%   50%,
+        var(--c) 50%  50%,
+        var(--c) 100% 50%;
+    background-size: 6px 50%;
+    background-repeat: no-repeat;
+    animation: load 1s infinite linear;
+}
+@keyframes load {
+    20% {background-position:0% 0%  ,50% 50% ,100% 50% }
+    40% {background-position:0% 100%,50% 0%  ,100% 50% }
+    60% {background-position:0% 50% ,50% 100%,100% 0%  }
+    80% {background-position:0% 50% ,50% 50% ,100% 100%}
+}

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>SacsiN | Buyer</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/sacsin-admin-style.css">
+    <link rel="stylesheet" href="../assets/css/sacsin-scrollbar-style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="../assets/fontawesome-free-5.15.3-web/js/all.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3 hidden>Bootstrap Sidebar</h3>
+                <img src="../assets/img/logo/sacsin_logo_dark.png" alt="" width="100">
+            </div>
+
+            <ul class="list-unstyled components">
+                <p class="text-dark">Dummy Heading</p>
+                <li>
+                    <a href="#"><span class="mx-3"><i class="fas fa-chart-pie"></i></span> Overview</a>
+                </li>
+                <li class="active">
+                    <a href="#requestPackage" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <span class="mx-3"><i class="fas fa-box"></i></span> Request Package
+                    </a>
+                    <ul class="collapse list-unstyled" id="requestPackage">
+                        <li>
+                            <a href="./">Request Packages</a>
+                        </li>
+                        <li class="current">
+                            <a href="create-request">Create Request</a>
+                        </li>
+                        <li>
+                            <a href="object">Object</a>
+                        </li>
+                        <li>
+                            <a href="request-sentence">Request Sentence</a>
+                        </li>
+                        <li>
+                            <a href="expected-response">Expected Response</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="mx-3"><i class="fas fa-comments"></i></span> Settings</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+
+                    <div class="profile">
+                        <span class="mr-4 notification"><i class="fa fa-bell"></i></span>
+                        <span class="mr-1 username">John Doe</span>
+                        <img src="../assets/img/pp_default.jpg" alt="pp" style="border-radius: 50%;" width="35px">
+                    </div>
+
+                </div>
+            </nav>
+
+            <div class="p-5 pt-4">
+
+                <h2 class="mb-5">Request Package</h2>
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body p-0 pt-4">
+                        <div class="row p-5">
+                            <div class="col-sm-6">
+                                <h5>Product</h5>
+                                <select class="form-control" name="product">
+                                    <option value="Product 0">Product 0</option>
+                                    <option value="Product 1">Product 1</option>
+                                    <option value="Product 2">Product 2</option>
+                                    <option value="Product 3">Product 3</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <h5>Seller</h5>
+                                <select class="form-control" name="seller">
+                                    <option value="Seller 0">Seller 0</option>
+                                    <option value="Seller 1">Seller 1</option>
+                                    <option value="Seller 2">Seller 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Object(s)
+                            <span class="card-actions">
+                                <span><i class="fa fa-trash"></i></span>
+                                <span><i class="fa fa-search"></i></span>
+                                <span><button class="btn btn-primary-light" data-display="#object">New</button></span>
+                            </span>
+                        </h4>
+                        <div class="table-responsive mt-5">
+                            <table class="table table-hover mt-3">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <input type="checkbox" name="">
+                                        </th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Request Response Sentence</th>
+                                        <th scope="col">Last Edited</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="objects">
+                                    <!-- Inject table data dynamically here-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-right">
+                    <button type="button" class="btn btn-primary px-5 py-2" id="create-request">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Side Pane -->
+    <div class="side-pane-backdrop" id="object">
+        <div class="side-pane loading">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <h5 class="mt-2">Create New Object</h5>
+                    <div>
+                        <button type="button" class="btn btn-light close-side-pane">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="save-object">Save</button>
+                    </div>
+                </div>
+            </nav>
+            <div class="side-pane-wrapper">
+                <div class="card shadow-sm border-0 m-5">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Select Object
+                        </h5>
+                        <form action="#">
+                            <select class="form-control" name="object">
+                                <option value="Object 4">Object 4</option>
+                                <option value="Object 4">Object 5</option>
+                                <option value="Object 4">Object 6</option>
+                                <option value="Object 4">Object 7</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+                <div class="card shadow-sm border-0 m-5">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Request Response Sentence
+                            <span class="float-right" data-display="#req-resp">
+                                <i class="fas fa-pen text-icons"></i>
+                            </span>
+                        </h5>
+                        <div class="text-center" id="selected-req-resps">
+                            <div class="rounded-circle mx-auto"
+                                style="background: #d5d5d5; width: 125px; height: 125px; display: flex; margin-top: 4rem;">
+                                <i class="fas fa-archive fa-3x m-auto text-white"></i>
+                            </div>
+                            <p class="text-primary pt-5 cursor-pointer" data-display="#req-resp">Select Request Response
+                                Sentence</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="side-pane-backdrop" id="exp-rep">
+        <div class="side-pane loading"></div>
+    </div>
+
+    <!-- Sub Side Pane -->
+    <div class="side-select-pane-backdrop" id="req-resp">
+        <div class="side-select-pane loading">
+            <nav class="navbar bg-light no-shadow">
+                <div class="container-fluid">
+                    <h5 class="mt-2">
+                        <span class="close-sub-side-pane mr-3">
+                            <i class="fas fa-times"></i>
+                        </span>
+                        Select Request Response Sentence
+                    </h5>
+                    <div>
+                        <span>
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+            <div class="side-select-pane-wrapper">
+                <form>
+                    <div class="text-left ml-5 mb-3">
+                        <button type="button" class="btn btn-primary" id="select-req-resp">Select</button>
+                    </div>
+                    <div class="scrollable request-response">
+                        <div class="row ml-0">
+                            <div class="col-sm-1">
+                                <input type="checkbox">
+                            </div>
+                            <div class="col-sm-9 option-txt">
+                                Request response name 1
+                            </div>
+                        </div>
+                        <div class="row ml-0">
+                            <div class="col-sm-1">
+                                <input type="checkbox">
+                            </div>
+                            <div class="col-sm-9 option-txt">
+                                Request response name 2
+                            </div>
+                        </div>
+                        <div class="row ml-0">
+                            <div class="col-sm-1">
+                                <input type="checkbox">
+                            </div>
+                            <div class="col-sm-9 option-txt">
+                                Request response name 3
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+    </script>
+    <!-- Custom Script -->
+    <script src="../assets/js/sacsin-admin-script.js"></script>
+
+    <script>
+        $(document).ready(function ($) {
+
+
+
+            // Select Request Response Sentence
+            $(".scrollable.request-response").contents().find(":checkbox").bind("change", function () {
+                val = this.checked, $(this).parent().parent().toggleClass("checked");
+                // console.log($(this).parent().siblings()[0].innerText)
+                let checked = [...$(".scrollable.request-response").find('.checked')]
+                // console.log(checked)
+                let selected_req_resp = []
+                $('.request-response .checked .option-txt').each((i, _elm) => {
+                    selected_req_resp.push(_elm.innerHTML)
+                })
+                console.log(selected_req_resp)
+                $('#select-req-resp').on('click', () => {
+                    $('#selected-req-resps').empty()
+                    selected_req_resp.forEach((req_resp) => {
+                        $('#selected-req-resps').append(
+                            `<div class="border rounded my-3 p-3">${req_resp}</div>`
+                            )
+                    })
+                    closeSubSidePane()
+                })
+
+                $('#save-object').off().on('click', () => {
+                    let data = {
+                        selected_object: $('[name="object"] option:selected').text(),
+                        request_response: selected_req_resp
+                    }
+                    console.log(data)
+                    createObject(data)
+                    closeSidePane()
+                })
+            })
+
+            $('#create-request').off().on('click', () => {
+                let data = {
+                    selected_product: $('[name="product"] option:selected').text(),
+                    selected_seller: $('[name="seller"] option:selected').text(),
+                    objects: _objs()
+                }
+                console.log(data)
+                createRequestPackage(data)
+                // $
+            })
+
+            function _objs() {
+                let _objs = []
+                $('.obj-name').each((i, _elm) => {
+                    _objs.push(_elm.innerText)
+                })
+                return _objs
+            }
+
+            function createObject(data) {
+                $.ajax({
+                    data: data,
+                    dataType: 'json',
+                    method: 'POST',
+                    url: '../assets/php/CreateObject.php',
+                    success: (res_data) => {
+                        console.log(res_data)
+                        showFeedback('success', 'Success!', 'Object has been created.', 3000)
+                        fetchObjects() // fetch objects
+                    },
+                    error: (res) => {
+                        showFeedback('danger', 'Oops!', 'An error occured while creating object.', 3500)
+                        // console.log(res)
+                    }
+                })
+            }
+
+            function createRequestPackage(data) {
+                $.ajax({
+                    data: data,
+                    dataType: 'json',
+                    method: 'POST',
+                    url: '../assets/php/CreateRequestPackage.php',
+                    success: (res_data) => {
+                        console.log(res_data)
+                        showFeedback('success', 'Success!', 'Request Package has been created.', 3000)
+                        setTimeout(() => {
+                            location.href = './'
+                        }, 3500)
+                    },
+                    error: (res) => {
+                        showFeedback('danger', 'Oops!', 'An error occured while creating Request Package.', 3500)
+                        console.log(res)
+                    }
+                })
+            }
+
+            // closes the side pane
+            function closeSidePane() {
+                $('.side-pane-backdrop').fadeOut("slow", () => {
+                    $('.side-pane').addClass('loading')
+                    $('body').removeClass('modal-open')
+                })
+            }
+
+            // closes the sub side pane
+            function closeSubSidePane() {
+                $('.side-select-pane-backdrop').fadeOut("slow", () => {
+                    $('.side-select-pane').addClass('loading')
+                    // $('#tr-title').empty() // clear the sub side pane title
+                    // resetTestReportForm() // reset the test report form
+                    // toggleTestReportBtn() // disable the test report button 
+                })
+            }
+
+            fetchObjects() // fetch objects
+
+            function fetchObjects() {
+                $.ajax({
+                    dataType: 'json',
+                    url: '../assets/php/ReadObjects.php',
+                    success: (res_data) => {
+                        // console.log(res_data)
+                        let table_rows = ""
+                        res_data.forEach(data => {
+                            table_rows += `
+                                <tr>
+                                    <th scope="row">
+                                        <input type="checkbox" name="">
+                                    </th>
+                                    <td class="text-primary obj-name">${data.name}</td>
+                                    <td>
+                                        <button class="alert alert-${data.alert_status}" role="alert" style="border-radius: 25px;">
+                                            ${data.response_sentence}
+                                        </button>
+                                    </td>
+                                    <td>${data.last_edited}</td>
+                                </tr>`
+                        })
+                        // Inject data to table
+                        $('tbody.objects').html(table_rows)
+                    }
+                })
+            }
+
+            /**
+             * Creates a feedback in the DOM by prepending it to the body element.
+             * @param {string} type - The feedback type.
+             * @param {string} title - The feedback message title.
+             * @param {string} text - The feedback message body.
+             * @return void
+             */
+            function prependFeedback(type, title = " ", text) {
+                $('body').prepend(`
+                <div class="alert alert-${type} action-feedback">
+                    <b id="feedback-title">${title}</b> <br>
+                    <span id="feedback-text">${text}</span>
+                </div>`)
+            }
+
+            /**
+             * Hides a feedback and removes it from the DOM.
+             * @param {number} duration - The feedback display duration.
+             * @return void
+             */
+            function hideFeedback(duration) {
+                setTimeout(() => {
+                    $('.action-feedback').fadeOut('slow', () => {
+                        $('.action-feedback').remove()
+                    })
+                }, duration)
+            }
+
+            /**
+             * Shows a feedback to the user.
+             * @param {string} type - The feedback type.
+             * @param {string} title - The feedback message title.
+             * @param {string} text - The feedback message body.
+             * @param {number} duration - The feedback display duration.
+             * @return void
+             */
+            function showFeedback(type, title = " ", text, duration) {
+                prependFeedback(type, title, text)
+                $('.action-feedback').css('display', 'block')
+                hideFeedback(duration)
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>
