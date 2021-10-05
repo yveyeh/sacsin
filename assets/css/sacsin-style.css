@@ -10577,10 +10577,22 @@ header.masthead {
     background-size: cover;
 }
 
-header.contact-banner {
+header.contact-banner,
+header.faq-banner,
+header.events-banner,
+header.about-banner,
+header.challenge-banner,
+header.project-banner {
+    width: 100%;
+    overflow: hidden;
     padding-top: 15rem;
     padding-bottom: calc(15rem - 4.5rem);
-    background: url("../img/pages/banner-images/contact_us.jpg");
+    background: #474444cc;  /* fallback for old browsers */
+}
+
+header.contact-banner {
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/contact_us.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/contact_us.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -10588,9 +10600,8 @@ header.contact-banner {
 }
 
 header.faq-banner {
-    padding-top: 15rem;
-    padding-bottom: calc(15rem - 4.5rem);
-    background: url("../img/pages/banner-images/faq.jpg");
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/faq.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/faq.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -10598,9 +10609,8 @@ header.faq-banner {
 }
 
 header.events-banner {
-    padding-top: 15rem;
-    padding-bottom: calc(15rem - 4.5rem);
-    background: url("../img/pages/banner-images/events.jpg");
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/events.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/events.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -10608,9 +10618,8 @@ header.events-banner {
 }
 
 header.about-banner {
-    padding-top: 15rem;
-    padding-bottom: calc(15rem - 4.5rem);
-    background: url("../img/pages/banner-images/about_us.jpg");
+    background: linear-gradient(rgba(54, 54, 54, 0.75), rgba(71, 68, 68, 0.75)), url("../img/pages/banner-images/about_us.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.75), rgba(71, 68, 68, 0.75)), url("../img/pages/banner-images/about_us.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -10618,9 +10627,8 @@ header.about-banner {
 }
 
 header.challenge-banner {
-    padding-top: 15rem;
-    padding-bottom: calc(15rem - 4.5rem);
-    background: url("../img/pages/banner-images/todays_challenge.jpg");
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/todays_challenge.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/todays_challenge.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -10628,9 +10636,8 @@ header.challenge-banner {
 }
 
 header.project-banner {
-    padding-top: 15rem;
-    padding-bottom: calc(15rem - 4.5rem);
-    background: url("../img/pages/banner-images/sacsin_project.jpg");
+    background: linear-gradient(rgba(54, 54, 54, 0.8), rgba(71, 68, 68, 0.8)), url("../img/pages/banner-images/sacsin_project.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.8), rgba(71, 68, 68, 0.8)), url("../img/pages/banner-images/sacsin_project.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -10783,6 +10790,6 @@ ul.sacsin-sense-of-urgency {
     list-style-image: url('../img/pages/png/ul-icon.png');
 }
 
-ul.sacsin-challenge li::marker {
-    /* margin-top: 0.5rem !important; */
-}
+/* ul.sacsin-challenge li::marker {
+    margin-top: 0.5rem !important;
+} */
