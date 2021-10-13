@@ -3723,8 +3723,8 @@ button:not(:disabled),
 }
 
 .accordion-button:not(.collapsed) {
-    color: #dc5834;
-    background-color: #feefeb;
+    color: #0c5460;
+    background-color: #d1ecf1;
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
 }
 
@@ -3757,9 +3757,9 @@ button:not(:disabled),
 
 .accordion-button:focus {
     z-index: 3;
-    border-color: #fab19d;
+    border-color: #bee5eb;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(244, 98, 58, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(190, 229, 235, 0.25);
 }
 
 .accordion-header {
@@ -3875,17 +3875,17 @@ button:not(:disabled),
 
 .page-link:hover {
     z-index: 2;
-    color: #c34e2e;
+    color: #ffc107;
     background-color: #e9ecef;
     border-color: #dee2e6;
 }
 
 .page-link:focus {
     z-index: 3;
-    color: #c34e2e;
+    color: #ffc107;
     background-color: #e9ecef;
     outline: 0;
-    box-shadow: 0 0 0 0.25rem rgba(244, 98, 58, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
 }
 
 .page-item:not(:first-child) .page-link {
@@ -10577,6 +10577,73 @@ header.masthead {
     background-size: cover;
 }
 
+header.contact-banner,
+header.faq-banner,
+header.events-banner,
+header.about-banner,
+header.challenge-banner,
+header.project-banner {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 15rem;
+    padding-bottom: calc(15rem - 4.5rem);
+    background: #474444cc;  /* fallback for old browsers */
+}
+
+header.contact-banner {
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/contact_us.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/contact_us.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.faq-banner {
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/faq.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/faq.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.events-banner {
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/events.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/events.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.about-banner {
+    background: linear-gradient(rgba(54, 54, 54, 0.75), rgba(71, 68, 68, 0.75)), url("../img/pages/banner-images/about_us.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.75), rgba(71, 68, 68, 0.75)), url("../img/pages/banner-images/about_us.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.challenge-banner {
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/todays_challenge.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.5), rgba(71, 68, 68, 0.5)), url("../img/pages/banner-images/todays_challenge.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+header.project-banner {
+    background: linear-gradient(rgba(54, 54, 54, 0.8), rgba(71, 68, 68, 0.8)), url("../img/pages/banner-images/sacsin_project.jpg");  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(rgba(54, 54, 54, 0.8), rgba(71, 68, 68, 0.8)), url("../img/pages/banner-images/sacsin_project.jpg"); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
 header.masthead h1,
 header.masthead .h1 {
     font-size: 2.25rem;
@@ -10625,12 +10692,12 @@ header.masthead .h1 {
 }
 
 #project-members img {
-    opacity: 0.25;
+    /* opacity: 0.25; */
     transition: transform 0.5s;
 }
 
 #project-members img:hover {
-    opacity: 1;
+    /* opacity: 1; */
     transform: scale(1.35);
 }
 
@@ -10713,3 +10780,16 @@ header.masthead .h1 {
     background: url('../img/social-icons/twitter.svg') no-repeat;
     background-size: cover;
 }
+
+.shadow-sm:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+ul.sacsin-challenge,
+ul.sacsin-sense-of-urgency {
+    list-style-image: url('../img/pages/png/ul-icon.png');
+}
+
+/* ul.sacsin-challenge li::marker {
+    margin-top: 0.5rem !important;
+} */

@@ -23,11 +23,12 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3 hidden>Bootstrap Sidebar</h3>
+                <h3 hidden>SacsiN Sidebar</h3>
                 <img src="../assets/img/logo/sacsin_logo_dark.png" alt="" width="100">
             </div>
 
-            <ul class="list-unstyled components pt-5">
+            <ul class="list-unstyled components pt-3">
+                <h3 class="ml-4 mb-4 text-uppercase">Buyer</h3>
                 <li>
                     <a href="#">
                         <span class="mx-3"><i class="fas fa-chart-pie"></i></span> Overview
@@ -80,7 +81,7 @@
 
                     <div class="profile">
                         <span class="mr-4 notification"><i class="fa fa-bell"></i></span>
-                        <span class="mr-1 username">John Doe</span>
+                        <span class="mr-1 username">James Green</span>
                         <img src="../assets/img/pp_default.jpg" alt="pp" style="border-radius: 50%;" width="35px">
                     </div>
 
@@ -119,15 +120,15 @@
                                         <th scope="row">
                                             <input type="checkbox" name="">
                                         </th>
-                                        <td class="text-primary">Cadmium</td>
+                                        <td class="text-primary">Cadmium (48)</td>
                                         <td>EN71-3:2019</td>
                                         <td>
                                             <button class="alert alert-success" role="alert" style="border-radius: 25px;">
-                                                Response name 1
+                                                Confirmation of continous compliance
                                             </button>
                                             <br>
                                             <button class="alert alert-warning" role="alert" style="border-radius: 25px;">
-                                                Response name 7
+                                                Measured result
                                             </button>
                                         </td>
                                         <td>2 mins</td>
@@ -136,11 +137,11 @@
                                         <th scope="row">
                                             <input type="checkbox" name="">
                                         </th>
-                                        <td class="text-primary">Lead</td>
-                                        <td>EN71-4:2020</td>
+                                        <td class="text-primary">Lead (82)</td>
+                                        <td>EN71-3:2019</td>
                                         <td>
                                             <button class="alert alert-success" role="alert" style="border-radius: 25px;">
-                                                Response name 2
+                                                Estimated amount
                                             </button>
                                         </td>
                                         <td>30 mins</td>
@@ -149,14 +150,68 @@
                                         <th scope="row">
                                             <input type="checkbox" name="">
                                         </th>
-                                        <td class="text-primary">Copper</td>
-                                        <td>EN65-3:2019</td>
+                                        <td class="text-primary">Copper (29)</td>
+                                        <td>EN71-3:2019</td>
                                         <td>
                                             <button class="alert alert-success" role="alert" style="border-radius: 25px;">
-                                                Response name 3
+                                                Calculated amount
                                             </button>
                                         </td>
                                         <td>2 hrs</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <input type="checkbox" name="">
+                                        </th>
+                                        <td class="text-primary">Mercury (80)</td>
+                                        <td>EN71-3:2019</td>
+                                        <td>
+                                            <button class="alert alert-success" role="alert" style="border-radius: 25px;">
+                                                Estimated amount, Estimation  model
+                                            </button>
+                                        </td>
+                                        <td>2 hrs</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Certification of production - site of production of buyer products
+                            <span class="card-actions">
+                                <span><i class="fa fa-trash"></i></span>
+                                <span><i class="fa fa-search"></i></span>
+                                <span><button class="btn btn-primary-light" data-display="#">New</button></span>
+                            </span>
+                        </h4>
+                        <div class="table-responsive mt-5">
+                            <table class="table table-hover mt-3">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <input type="checkbox" name="">
+                                        </th>
+                                        <th scope="col">Standard for Certification</th>
+                                        <th scope="col">Expected Response</th>
+                                        <th scope="col">Last Edited</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <input type="checkbox" name="">
+                                        </th>
+                                        <td>ISO-EN-14000</td>
+                                        <td>
+                                            <button class="alert alert-info" role="alert" style="border-radius: 25px;">
+                                                Confirmed, Yes/No/Not applicable, <br> Document ID, text, Issue date, date, <br> document issuer, text, Comment, text
+                                            </button>
+                                        </td>
+                                        <td>5 mins</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -195,7 +250,7 @@
                                         <td class="text-primary">Magnesium</td>
                                         <td>100</td>
                                         <td>
-                                            Mg/Kg
+                                            mg/kg
                                         </td>
                                         <td>5 mins</td>
                                     </tr>
@@ -208,7 +263,7 @@
                 <div class="card shadow-sm border-0 mb-5">
                     <div class="card-body">
                         <h4 class="card-title">
-                            Substance released from production
+                            Substance released
                             <span class="card-actions">
                                 <span><i class="fa fa-trash"></i></span>
                                 <span><i class="fa fa-search"></i></span>
@@ -219,7 +274,7 @@
                         </h4>
                         <div class="table-responsive mt-5">
                             <table class="table table-hover mt-3">
-                                <thead>
+                                <!-- <thead>
                                     <tr>
                                         <th scope="col">
                                             <input type="checkbox" name="">
@@ -227,14 +282,21 @@
                                         <th scope="col">Substance</th>
                                         <th scope="col">Last Edited</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
+                                </thead> -->
+                                <tbody>
                                     <tr>
                                         <th scope="row">
                                             <input type="checkbox" name="">
                                         </th>
-                                        <td class="text-primary">Carbondioxide</td>
-                                        <td>5 mins</td>
+                                        <td class="text-primary">Release from production - Product</td>
+                                        <td>CO2 (124-38-9)</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <input type="checkbox" name="">
+                                        </th>
+                                        <td class="text-primary">Release from production - Parts and materials</td>
+                                        <td>CO2 (124-38-9)</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -304,10 +366,10 @@
                                     <div class="mb-4">
                                         <label for="">Element</label>
                                         <select class="form-control" name="">
-                                            <option value="">Sodium</option>
-                                            <option value="">Carbon</option>
-                                            <option value="">Chlorine</option>
-                                            <option value="">Cobalt</option>
+                                            <option value="Cadmium (48)">Cadmium (48)</option>
+                                            <option value="Lead (82)">Lead (82)</option>
+                                            <option value="Copper (29)">Copper (29)</option>
+                                            <option value="Mercury (80)">Mercury (80)</option>
                                         </select>
                                     </div>
                                     <div>
@@ -319,17 +381,13 @@
                                     <div class="mb-4">
                                         <label for="">Standard for test method</label>
                                         <select class="form-control" name="">
-                                            <option value="">Test Method Standard 0</option>
-                                            <option value="">Test Method Standard 1</option>
-                                            <option value="">Test Method Standard 2</option>
+                                            <option value="EN 71-3:2019">EN 71-3:2019</option>
                                         </select>
                                     </div>
                                     <div>
                                         <label for="">Unit of measure</label>
                                         <select class="form-control" name="">
-                                            <option value="">Kilograms</option>
-                                            <option value="">Square meters</option>
-                                            <option value="">Cubic meters</option>
+                                            <option value="mg/kg">mg/kg</option>
                                         </select>
                                     </div>
                                 </div>
@@ -438,7 +496,7 @@
                 </nav>
                 <div class="side-select-pane-wrapper">
                     <form>
-                        <div class="text-center mb-3">
+                        <div class="text-left ml-5 mb-3">
                             <button type="button" class="btn btn-primary" id="select-exp-resp">Select</button>
                         </div>
                         <div class="scrollable responses">
