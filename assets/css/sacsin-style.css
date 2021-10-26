@@ -10756,11 +10756,12 @@ header.masthead .h1 {
 
 .social-auth .btn {
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
     border: none;
     border-radius: 50%;
     margin-right: 0.75rem;
+    margin-top: 0.75rem;
 }
 
 .btn-google,
@@ -10783,6 +10784,11 @@ header.masthead .h1 {
 
 .btn-instagram {
     background: url('../img/social-icons/instagram.png') no-repeat;
+    background-size: cover;
+}
+
+.btn-linkedin {
+    background: url('../img/social-icons/linkedin.png') no-repeat;
     background-size: cover;
 }
 
