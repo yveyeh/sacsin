@@ -8,10 +8,13 @@ $a = array();
 if ($result) {
     while ($row = $result->fetch_object()) {
         array_push($a, array (
+            "package_number" => $row->package_number,
+            "request_id" => $row->request_id,
             "product" => $row->product, 
             "seller" => $row->seller, 
             "objects" => unserialize($row->objects),
-            "last_edited" => $row->last_edited
+            "last_edited" => $row->last_edited,
+            "exp_file" => $row->exp_file
         ));
         // $a[] = $row;
     }
