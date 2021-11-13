@@ -93,6 +93,7 @@
                         <h4 class="card-title">
                             Product Request Package Relation
                             <span class="card-actions">
+                                <span><i class="fa fa-download"></i></span>
                                 <span><i class="fa fa-trash"></i></span>
                                 <span><i class="fa fa-search"></i></span>
                                 <span><button class="btn btn-primary-light" onclick="location.href='create-request'">New</button></span>
@@ -147,6 +148,7 @@
                 $.ajax({
                     dataType: 'json',
                     url: '../assets/php/ReadRequestPackages.php',
+                    headers: { 'Content-Disposition': 'attachment; filename="downloaded.scsn"' },
                     success: (res_data) => {
                         console.log(res_data)
                         let table_rows = ""
@@ -160,6 +162,11 @@
                                     <td>${data.seller}</td>
                                     <td>${getObjNames(data.objects)}</td>
                                     <td>${data.last_edited}</td>
+                                    <td>
+                                        <a href="../assets/php/exports/${data.exp_file}" download>
+                                            <i class="fa fa-download" title="export request package"></i>
+                                        </a>
+                                    </td>
                                 </tr>`
                         })
                         // Inject data to table

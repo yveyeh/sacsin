@@ -352,7 +352,9 @@
                     url: '../assets/php/CreateRequestPackage.php',
                     success: (res_data) => {
                         console.log(res_data)
-                        showFeedback('success', 'Success!', 'Request Package has been created.', 3000)
+                        res_data.status === 'success'
+                            ? showFeedback('success', 'Success!', res_data.message, 3000)
+                            : showFeedback('danger', 'Oops!', res_data.message, 3000)
                         setTimeout(() => {
                             location.href = './'
                         }, 3500)

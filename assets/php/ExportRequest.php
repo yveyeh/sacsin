@@ -13,11 +13,11 @@ $path = substr($string, 0, $pos) . '/exports/';
 
 // echo (string) time();
 
-
+echo generate_request_id($connection);
 
 // exit();
 
-export_request($connection, 7, $path);
+// create_request_export($connection, 7, $path);
 
 // echo '<br><br>';
 

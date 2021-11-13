@@ -228,7 +228,8 @@ a.article:hover {
 }
 
 .card-actions span>.fa-trash,
-.card-actions span>.fa-search {
+.card-actions span>.fa-search,
+.card-actions span>.fa-download {
     font-size: large;
     margin-right: 1rem;
     cursor: pointer;
