@@ -33,10 +33,10 @@
                     <a href="#"><span class="mx-3"><i class="fas fa-chart-pie"></i></span> Overview</a>
                 </li>
                 <li class="active">
-                    <a href="#requestPackage" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="#requestPackage" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         <span class="mx-3"><i class="fas fa-box"></i></span> Request Package
                     </a>
-                    <ul class="collapse list-unstyled" id="requestPackage">
+                    <ul class="collapse list-unstyled show" id="requestPackage">
                         <li class="current">
                             <a href="./">
                                 Request Packages
@@ -46,7 +46,7 @@
                             <a href="create-request">Create Request</a>
                         </li>
                         <li>
-                            <a href="object">Object</a>
+                            <a href="object">Request Package Template</a>
                         </li>
                         <li>
                             <a href="request-sentence">Request Sentence</a>

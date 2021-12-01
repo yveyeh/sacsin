@@ -9,7 +9,8 @@
     <title>SacsiN | Buyer</title>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../assets/css/sacsin-admin-style.css">
     <link rel="stylesheet" href="../assets/css/sacsin-scrollbar-style.css">
@@ -33,10 +34,10 @@
                     <a href="#"><span class="mx-3"><i class="fas fa-chart-pie"></i></span> Overview</a>
                 </li>
                 <li class="active">
-                    <a href="#requestPackage" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="#requestPackage" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         <span class="mx-3"><i class="fas fa-box"></i></span> Request Package
                     </a>
-                    <ul class="collapse list-unstyled" id="requestPackage">
+                    <ul class="collapse list-unstyled show" id="requestPackage">
                         <li>
                             <a href="./">
                                 Request Packages
@@ -46,7 +47,7 @@
                             <a href="create-request">Create Request</a>
                         </li>
                         <li class="current">
-                            <a href="object">Object</a>
+                            <a href="object">Request Package Template</a>
                         </li>
                         <li>
                             <a href="request-sentence">Request Sentence</a>
@@ -91,7 +92,7 @@
                 <div class="card shadow-sm border-0 mb-4">
                     <div class="card-body">
                         <h4 class="card-title">
-                            Objects
+                            Request Package Template
                             <span class="card-actions">
                                 <span><i class="fa fa-trash"></i></span>
                                 <span><i class="fa fa-search"></i></span>
@@ -119,7 +120,7 @@
                 </div>
 
             </div>
-            
+
         </div>
     </div>
 
@@ -145,7 +146,8 @@
                             <select class="form-control" name="object">
                                 <option value="Toy requirements EN 71-3:2019">Toy requirements EN 71-3:2019</option>
                                 <option value="CO2 footprint production">CO2 footprint production</option>
-                                <option value="CO2 footprint production and external parts and components">CO2 footprint production and external parts and components</option>
+                                <option value="CO2 footprint production and external parts and components">CO2 footprint
+                                    production and external parts and components</option>
                             </select>
                         </form>
                     </div>
@@ -159,10 +161,12 @@
                             </span>
                         </h5>
                         <div class="text-center" id="selected-req-resps">
-                            <div class="rounded-circle mx-auto" style="background: #d5d5d5; width: 125px; height: 125px; display: flex; margin-top: 4rem;">
+                            <div class="rounded-circle mx-auto"
+                                style="background: #d5d5d5; width: 125px; height: 125px; display: flex; margin-top: 4rem;">
                                 <i class="fas fa-archive fa-3x m-auto text-white"></i>
                             </div>
-                            <p class="text-primary pt-5 cursor-pointer" data-display="#req-resp">Select Request Response Sentence</p>
+                            <p class="text-primary pt-5 cursor-pointer" data-display="#req-resp">Select Request Response
+                                Sentence</p>
                         </div>
                     </div>
                 </div>
@@ -232,17 +236,21 @@
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+    </script>
     <!-- Custom Script -->
     <script src="../assets/js/sacsin-admin-script.js"></script>
 
     <script>
-        $(document).ready(function($) {
+        $(document).ready(function ($) {
 
             // Select Request Response Sentence
-            $(".scrollable.request-response").contents().find(":checkbox").bind("change", function() {
+            $(".scrollable.request-response").contents().find(":checkbox").bind("change", function () {
                 val = this.checked, $(this).parent().parent().toggleClass("checked");
                 // console.log($(this).parent().siblings()[0].innerText)
                 let checked = [...$(".scrollable.request-response").find('.checked')]
@@ -255,7 +263,9 @@
                 $('#select-req-resp').on('click', () => {
                     $('#selected-req-resps').empty()
                     selected_req_resp.forEach((req_resp) => {
-                        $('#selected-req-resps').append(`<div class="border rounded my-3 p-3">${req_resp}</div>`)
+                        $('#selected-req-resps').append(
+                            `<div class="border rounded my-3 p-3">${req_resp}</div>`
+                            )
                     })
                     closeSubSidePane()
                 })
@@ -288,23 +298,23 @@
                 })
             }
 
-                    // closes the side pane
-    function closeSidePane() {
-        $('.side-pane-backdrop').fadeOut("slow", () => {
-            $('.side-pane').addClass('loading')
-            $('body').removeClass('modal-open')
-        })
-    }
+            // closes the side pane
+            function closeSidePane() {
+                $('.side-pane-backdrop').fadeOut("slow", () => {
+                    $('.side-pane').addClass('loading')
+                    $('body').removeClass('modal-open')
+                })
+            }
 
-                    // closes the sub side pane
-    function closeSubSidePane() {
-        $('.side-select-pane-backdrop').fadeOut("slow", () => {
-            $('.side-select-pane').addClass('loading')
-            // $('#tr-title').empty() // clear the sub side pane title
-            // resetTestReportForm() // reset the test report form
-            // toggleTestReportBtn() // disable the test report button 
-        })
-    }
+            // closes the sub side pane
+            function closeSubSidePane() {
+                $('.side-select-pane-backdrop').fadeOut("slow", () => {
+                    $('.side-select-pane').addClass('loading')
+                    // $('#tr-title').empty() // clear the sub side pane title
+                    // resetTestReportForm() // reset the test report form
+                    // toggleTestReportBtn() // disable the test report button 
+                })
+            }
 
             fetchObjects() // fetch objects
 

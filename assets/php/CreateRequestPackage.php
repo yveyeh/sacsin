@@ -25,8 +25,8 @@ $result = mysqli_query($connection, $sql);
 $a = array();
 
 if ($result) {
-        $a['status'] = "success";
-        $a['message'] = "Request Package has been created.";
+    $a['status'] = "success";
+    $a['message'] = "Request Package has been created.";
     echo json_encode($a);
 } else {
     $a['status'] = "error";

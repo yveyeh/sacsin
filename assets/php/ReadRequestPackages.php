@@ -11,10 +11,13 @@ if ($result) {
             "package_number" => $row->package_number,
             "request_id" => $row->request_id,
             "product" => $row->product, 
+            "buyer" => $row->buyer, 
             "seller" => $row->seller, 
             "objects" => unserialize($row->objects),
             "last_edited" => $row->last_edited,
-            "exp_file" => $row->exp_file
+            "exp_file" => $row->exp_file,
+            "status" => $row->status, 
+            "display" => $row->display
         ));
         // $a[] = $row;
     }

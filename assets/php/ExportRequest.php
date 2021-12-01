@@ -13,7 +13,11 @@ $path = substr($string, 0, $pos) . '/exports/';
 
 // echo (string) time();
 
-echo generate_request_id($connection);
+$i = generate_user_id($connection, 'buyer');
+echo $i;
+
+echo '<br></br>';
+echo generate_user_id($connection, 'seller');
 
 // exit();
 

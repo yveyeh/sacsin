@@ -35,9 +35,14 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="#requests" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         <span class="mx-3"><i class="fas fa-comments"></i></span> Requests
                     </a>
+                    <ul class="collapse list-unstyled show" id="requests" style="padding-left: 2.5rem;">
+                        <!-- <li>
+                            <a href="./"><i class="fa fa-upload mr-2"></i> Import Request</a>
+                        </li> -->
+                    </ul>
                 </li>
                 <li>
                     <a href="#">
@@ -214,7 +219,7 @@
     <script type="text/javascript">
         $(document).ready(() => {
             $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active')
+                $('#sidebar').toggleClass('current')
             })
         });
     </script>

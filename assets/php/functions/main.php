@@ -69,6 +69,77 @@ function generate_request_id($db): string
 }
 
 /**
+ * Generates the id of a new user
+ * to be inserted in the database.
+ * @param mysqli $db The database connection.
+ * @param string $role The user role.
+ * @return string
+ */
+function generate_user_id($db, $role) {
+    try {
+        /**
+         * The generated id for a new user
+         * @var string $user_id
+         */
+        $user_id;
+        //
+        switch ($role) {
+            case 'buyer':
+                // generate user id
+                $user_id = get_random_str(6, '0123456789');
+                // check that there's no duplication
+                $res = mysqli_query($db, "SELECT `id` FROM `user` WHERE `user_id` = '$user_id'"); 
+                // check user id and take appropriate action.
+                return check_user_id($db, $res, $user_id, $role);
+                break;
+            case 'seller':
+                // generate user id
+                $user_id = 'SI-' . get_random_str(4, '0123456789') . get_random_str(1, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ');
+                // check that there's no duplication
+                $res = mysqli_query($db, "SELECT `id` FROM `user` WHERE `user_id` = '$user_id'");
+                // check user id and take appropriate action.
+                return check_user_id($db, $res, $user_id, $role);
+                break;
+            default:
+                break;
+        }
+    } catch (\Throwable $th) {
+        throw $th;
+    }
+}
+
+/**
+ * Checks for the truthiness of the existence of a user id.
+ * Returns the user id if it doesn't exist in the database.
+ * @param mysqli $db The database connection.
+ * @param \mysqli_result|bool $res The result from mysqli_query.
+ * @param string $user_id The generated user id.
+ * @param string $role The user role.
+ */
+function check_user_id($db, $res, $user_id, $role) {
+    // user id already exists so recurse (by re-calling generate_user_id).
+    if ($res->num_rows > 0):
+        // unset variables in attempt to free memory they use.
+        unset_vars([$user_id, $res]);
+        // function call.
+        generate_user_id($db, $role);
+    // user id doesn't yet exist so return.
+    else:
+        return $user_id;
+    endif;
+}
+
+/**
+ * Unsets variable(s).
+ * @param array $vars An array of variable(s)
+ */
+function unset_vars($vars) {
+    foreach ($vars as $var) {
+        unset($var);
+    }
+}
+
+/**
  * Returns a name to be used for a file.
  * @param string $filename The name of the file to be exported.
  * @param string $extension [optional] The file extension.
@@ -119,7 +190,7 @@ function create_request_export($request_id, $package_num, $path)
 /**
  * 
  */
-function import_request()
+function import_request($db, $filename)
 {
     #code...
 }
