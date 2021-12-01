@@ -67,6 +67,10 @@ a:focus {
     transition: all 0.3s;
 }
 
+#sidebar li.active {
+    color: #e9c110
+}
+
 /* #55B5C4
 #736874
 #93949b */
@@ -107,12 +111,12 @@ a:focus {
 
 #sidebar ul li.current>a,
 a[aria-expanded="true"] {
-    color: #e9c110;;
+    color: #e9c110 !important;
     /* background: #e9c110;; */
 }
 
-#sidebar ul li.current li.current a {
-    color: #e9c110;;
+#sidebar ul li.active li a {
+    color: #fff;
 }
 
 #sidebar ul li a.dropdown-toggle::after {

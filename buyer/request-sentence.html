@@ -9,7 +9,8 @@
     <title>SacsiN | Buyer</title>
 
     <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="../assets/css/sacsin-admin-style.css">
     <link rel="stylesheet" href="../assets/css/sacsin-scrollbar-style.css">
@@ -35,10 +36,10 @@
                     </a>
                 </li>
                 <li class="active">
-                    <a href="#requestPackage" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <a href="#requestPackage" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                         <span class="mx-3"><i class="fas fa-box"></i></span> Request Package
                     </a>
-                    <ul class="collapse list-unstyled" id="requestPackage">
+                    <ul class="collapse list-unstyled show" id="requestPackage">
                         <li>
                             <a href="./">Request Packages</a>
                         </li>
@@ -46,7 +47,7 @@
                             <a href="create-request">Create Request</a>
                         </li>
                         <li>
-                            <a href="object">Object</a>
+                            <a href="object">Request Package Template</a>
                         </li>
                         <li class="current">
                             <a href="request-sentence">Request Sentence</a>
@@ -99,7 +100,8 @@
                             <span class="card-actions">
                                 <span><i class="fa fa-trash"></i></span>
                                 <span><i class="fa fa-search"></i></span>
-                                <span><button class="btn btn-primary-light" data-display="#migration">New</button></span>
+                                <span><button class="btn btn-primary-light"
+                                        data-display="#migration">New</button></span>
                             </span>
                         </h4>
                         <div class="table-responsive mt-5">
@@ -114,64 +116,9 @@
                                         <th scope="col">Expected Response</th>
                                         <th scope="col">Last Edited</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <input type="checkbox" name="">
-                                        </th>
-                                        <td class="text-primary">Cadmium (48)</td>
-                                        <td>EN71-3:2019</td>
-                                        <td>
-                                            <button class="alert alert-success" role="alert" style="border-radius: 25px;">
-                                                Confirmation of continous compliance
-                                            </button>
-                                            <br>
-                                            <button class="alert alert-warning" role="alert" style="border-radius: 25px;">
-                                                Measured result
-                                            </button>
-                                        </td>
-                                        <td>2 mins</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <input type="checkbox" name="">
-                                        </th>
-                                        <td class="text-primary">Lead (82)</td>
-                                        <td>EN71-3:2019</td>
-                                        <td>
-                                            <button class="alert alert-success" role="alert" style="border-radius: 25px;">
-                                                Estimated amount
-                                            </button>
-                                        </td>
-                                        <td>30 mins</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <input type="checkbox" name="">
-                                        </th>
-                                        <td class="text-primary">Copper (29)</td>
-                                        <td>EN71-3:2019</td>
-                                        <td>
-                                            <button class="alert alert-success" role="alert" style="border-radius: 25px;">
-                                                Calculated amount
-                                            </button>
-                                        </td>
-                                        <td>2 hrs</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <input type="checkbox" name="">
-                                        </th>
-                                        <td class="text-primary">Mercury (80)</td>
-                                        <td>EN71-3:2019</td>
-                                        <td>
-                                            <button class="alert alert-success" role="alert" style="border-radius: 25px;">
-                                                Estimated amount, Estimation  model
-                                            </button>
-                                        </td>
-                                        <td>2 hrs</td>
-                                    </tr>
+                                </thead>
+                                <tbody class="migration-from-material">
+                                    <!-- Inject table data dynamically here -->
                                 </tbody>
                             </table>
                         </div>
@@ -199,20 +146,9 @@
                                         <th scope="col">Expected Response</th>
                                         <th scope="col">Last Edited</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <input type="checkbox" name="">
-                                        </th>
-                                        <td>ISO-EN-14000</td>
-                                        <td>
-                                            <button class="alert alert-info" role="alert" style="border-radius: 25px;">
-                                                Confirmed, Yes/No/Not applicable, <br> Document ID, text, Issue date, date, <br> document issuer, text, Comment, text
-                                            </button>
-                                        </td>
-                                        <td>5 mins</td>
-                                    </tr>
+                                </thead>
+                                <tbody class="certification-of-production">
+                                    <!-- Inject table data dynamically here -->
                                 </tbody>
                             </table>
                         </div>
@@ -226,7 +162,8 @@
                             <span class="card-actions">
                                 <span><i class="fa fa-trash"></i></span>
                                 <span><i class="fa fa-search"></i></span>
-                                <span><button class="btn btn-primary-light" data-display="#content-in-migration">New</button></span>
+                                <span><button class="btn btn-primary-light"
+                                        data-display="#content-in-migration">New</button></span>
                             </span>
                         </h4>
                         <div class="table-responsive mt-5">
@@ -241,19 +178,9 @@
                                         <th scope="col">Unit</th>
                                         <th scope="col">Last Edited</th>
                                     </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <input type="checkbox" name="">
-                                        </th>
-                                        <td class="text-primary">Magnesium</td>
-                                        <td>100</td>
-                                        <td>
-                                            mg/kg
-                                        </td>
-                                        <td>5 mins</td>
-                                    </tr>
+                                </thead>
+                                <tbody class="content-in-material">
+                                    <!-- Inject table data dynamically here -->
                                 </tbody>
                             </table>
                         </div>
@@ -268,7 +195,8 @@
                                 <span><i class="fa fa-trash"></i></span>
                                 <span><i class="fa fa-search"></i></span>
                                 <span>
-                                    <button type="button" class="btn btn-primary-light" data-display="#subs-rel">New</button>
+                                    <button type="button" class="btn btn-primary-light"
+                                        data-display="#subs-rel">New</button>
                                 </span>
                             </span>
                         </h4>
@@ -283,21 +211,8 @@
                                         <th scope="col">Last Edited</th>
                                     </tr>
                                 </thead> -->
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">
-                                            <input type="checkbox" name="">
-                                        </th>
-                                        <td class="text-primary">Release from production - Product</td>
-                                        <td>CO2 (124-38-9)</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <input type="checkbox" name="">
-                                        </th>
-                                        <td class="text-primary">Release from production - Parts and materials</td>
-                                        <td>CO2 (124-38-9)</td>
-                                    </tr>
+                                <tbody class="substance-released">
+                                    <!-- Inject table data dynamically here -->
                                 </tbody>
                             </table>
                         </div>
@@ -305,7 +220,7 @@
                 </div>
 
             </div>
-            
+
         </div>
     </div>
 
@@ -314,7 +229,7 @@
         <div class="side-pane loading">
             <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <h5 class="mt-2">Substance released from production</h5>
+                    <h5 class="mt-2">Create Request Sentence</h5>
                     <div>
                         <button type="button" class="btn btn-light close-side-pane">Cancel</button>
                         <button type="button" class="btn btn-primary">Save</button>
@@ -325,11 +240,12 @@
                 <div class="card shadow-sm border-0 m-5">
                     <div class="card-body">
                         <h5 class="card-title">
-                            Select Substance
+                            Substance
                         </h5>
                         <!-- <hr> -->
                         <form action="#" class="my-4">
                             <select class="form-control" name="">
+                                <option value="" selected disabled>Select Substance</option>
                                 <option value="">Carbon dioxide</option>
                                 <option value="">Carbon monoxide</option>
                             </select>
@@ -404,10 +320,12 @@
                             </span>
                         </h5>
                         <div class="text-center" id="selected-exp-resps">
-                            <div class="rounded-circle mx-auto" style="background: #d5d5d5; width: 125px; height: 125px; display: flex; margin-top: 4rem;">
+                            <div class="rounded-circle mx-auto"
+                                style="background: #d5d5d5; width: 125px; height: 125px; display: flex; margin-top: 4rem;">
                                 <i class="fas fa-archive fa-3x m-auto text-white"></i>
                             </div>
-                            <p class="text-primary pt-5 cursor-pointer" data-display="#subs">Select Expected Response</p>
+                            <p class="text-primary pt-5 cursor-pointer" data-display="#subs">Select Expected Response
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -441,6 +359,7 @@
                                     <div class="mb-4">
                                         <label for="">Element</label>
                                         <select class="form-control" name="">
+                                            <option value="" selected disabled>Select Element</option>
                                             <option value="">Sodium</option>
                                             <option value="">Carbon</option>
                                             <option value="">Chlorine</option>
@@ -452,6 +371,7 @@
                                     <div class="mb-4">
                                         <label for="">Maximum limit</label>
                                         <select class="form-control" name="">
+                                            <option value="" selected disabled>Select Maximum Limit</option>
                                             <option value="">Limit 0</option>
                                             <option value="">Limit 1</option>
                                             <option value="">Limit 2</option>
@@ -462,6 +382,7 @@
                                     <div class="mb-4">
                                         <label for="">Unit of measure</label>
                                         <select class="form-control" name="">
+                                            <option value="" selected disabled>Select Unit of Measure</option>
                                             <option value="">Kilograms</option>
                                             <option value="">Square meters</option>
                                             <option value="">Cubic meters</option>
@@ -476,87 +397,93 @@
         </div>
     </div>
 
-        <!-- Sub Side Pane -->
-        <div class="side-select-pane-backdrop" id="subs">
-            <div class="side-select-pane loading">
-                <nav class="navbar bg-light no-shadow">
-                    <div class="container-fluid">
-                        <h5 class="mt-2">
-                            <span class="close-sub-side-pane mr-3">
-                                <i class="fas fa-times"></i>
-                            </span>
-                            Select Expected Response
-                        </h5>
-                        <div>
-                            <span>
-                                <i class="fas fa-search"></i>
-                            </span>
+    <!-- Sub Side Pane -->
+    <div class="side-select-pane-backdrop" id="subs">
+        <div class="side-select-pane loading">
+            <nav class="navbar bg-light no-shadow">
+                <div class="container-fluid">
+                    <h5 class="mt-2">
+                        <span class="close-sub-side-pane mr-3">
+                            <i class="fas fa-times"></i>
+                        </span>
+                        Select Expected Response
+                    </h5>
+                    <div>
+                        <span>
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+            <div class="side-select-pane-wrapper">
+                <form>
+                    <div class="text-left ml-5 mb-3">
+                        <button type="button" class="btn btn-primary" id="select-exp-resp">Select</button>
+                    </div>
+                    <div class="scrollable responses">
+                        <div class="row ml-0">
+                            <div class="col-sm-1">
+                                <input type="checkbox">
+                            </div>
+                            <div class="col-sm-9">
+                                <span class="option-txt">Response Name 1</span>
+                                <br>
+                                <span class="text-details">
+                                    EN:123456, Doc ID, Doc Issuer, Result
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row ml-0">
+                            <div class="col-sm-1">
+                                <input type="checkbox">
+                            </div>
+                            <div class="col-sm-9">
+                                <span class="option-txt">Response Name 2</span>
+                                <br>
+                                <span class="text-details">
+                                    EN:123456, Doc ID, Result
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row ml-0">
+                            <div class="col-sm-1">
+                                <input type="checkbox">
+                            </div>
+                            <div class="col-sm-9">
+                                <span class="option-txt">Response Name 3</span>
+                                <br>
+                                <span class="text-details">
+                                    EN:123456, Doc ID, Expiry Date
+                                </span>
+                            </div>
                         </div>
                     </div>
-                </nav>
-                <div class="side-select-pane-wrapper">
-                    <form>
-                        <div class="text-left ml-5 mb-3">
-                            <button type="button" class="btn btn-primary" id="select-exp-resp">Select</button>
-                        </div>
-                        <div class="scrollable responses">
-                            <div class="row ml-0">
-                                <div class="col-sm-1">
-                                    <input type="checkbox">
-                                </div>
-                                <div class="col-sm-9">
-                                    <span class="option-txt">Response Name 1</span>
-                                    <br>
-                                    <span class="text-details">
-                                        EN:123456, Doc ID, Doc Issuer, Result
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="row ml-0">
-                                <div class="col-sm-1">
-                                    <input type="checkbox">
-                                </div>
-                                <div class="col-sm-9">
-                                    <span class="option-txt">Response Name 2</span> 
-                                    <br>
-                                    <span class="text-details">
-                                        EN:123456, Doc ID, Result
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="row ml-0">
-                                <div class="col-sm-1">
-                                    <input type="checkbox">
-                                </div>
-                                <div class="col-sm-9">
-                                    <span class="option-txt">Response Name 3</span>
-                                    <br>
-                                    <span class="text-details">
-                                        EN:123456, Doc ID, Expiry Date
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
+    </div>
 
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+    </script>
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+    </script>
+    <!-- Moment JS -->
+    <script src="../assets/plugins/js/moment.min.js"></script>
     <!-- Custom Script -->
     <script src="../assets/js/sacsin-admin-script.js"></script>
 
     <script>
-        $(document).ready(function($) {
+        $(document).ready(function ($) {
 
             // Select Object
-            $(".scrollable.responses").contents().find(":checkbox").bind("change", function() {
+            $(".scrollable.responses").contents().find(":checkbox").bind("change", function () {
                 val = this.checked, $(this).parent().parent().toggleClass("checked");
                 let selected_exp_resps = []
                 $('.responses .checked .option-txt').each((i, elm) => {
@@ -566,10 +493,145 @@
                 $('#select-exp-resp').on('click', () => {
                     $('#selected-exp-resps').empty()
                     selected_exp_resps.forEach((exp_resp) => {
-                        $('#selected-exp-resps').append(`<div class="border rounded my-3 p-3">${exp_resp}</div>`)
+                        $('#selected-exp-resps').append(
+                            `<div class="border rounded my-3 p-3">${exp_resp}</div>`
+                        )
                     })
                 })
             })
+
+
+            //
+            fetchMigrationFromMaterial() // fetch certification of production
+            fetchCertificationOfProduction() // fetch certification of production
+            fetchContentInMaterial() // fetch content in material
+            fetchSubstanceReleased() // fetch substance released
+            
+
+            function fetchSubstanceReleased() {
+                $.ajax({
+                    dataType: 'json',
+                    type: 'POST',
+                    data: jQuery.param({table: "substance_released"}),
+                    url: '../assets/php/ReadRequestSentences.php',
+                    success: (res_data) => {
+                        console.log(res_data)
+                        let table_rows = ""
+                        res_data.forEach(data => {
+                            table_rows += `
+                            <tr>
+                                <th scope="row">
+                                    <input type="checkbox" name="">
+                                </th>
+                                <td class="text-primary">${data.release_type}</td>
+                                <td>${data.release_substance}</td>
+                            </tr>`
+                        })
+                        // Inject data to table
+                        $('tbody.substance-released').html(table_rows)
+                    }
+                })
+            }
+
+            function fetchContentInMaterial() {
+                $.ajax({
+                    dataType: 'json',
+                    type: 'POST',
+                    data: jQuery.param({table: "content_in_material"}),
+                    url: '../assets/php/ReadRequestSentences.php',
+                    success: (res_data) => {
+                        console.log(res_data)
+                        let table_rows = ""
+                        res_data.forEach(data => {
+                            // let last_edited = (data.updated_at.split(' ')[0]).split('-').reverse().join('/')
+                            // let last_edited = moment(data.updated_at, "YYYY-MM-DD hh:mm:ss").fromNow()
+                            table_rows += `
+                            <tr>
+                                <th scope="row">
+                                    <input type="checkbox" name="">
+                                </th>
+                                <td class="text-primary">${data.element}</td>
+                                <td>${data.maximum_limit}</td>
+                                <td>${data.measurement_unit}</td>
+                                <td>${getLastEdited(data.updated_at)}</td>
+                            </tr>`
+                        })
+                        // Inject data to table
+                        $('tbody.content-in-material').html(table_rows)
+                    }
+                })
+            }
+
+            function fetchCertificationOfProduction() {
+                $.ajax({
+                    dataType: 'json',
+                    type: 'POST',
+                    data: jQuery.param({table: "certification_of_production"}),
+                    url: '../assets/php/ReadRequestSentences.php',
+                    success: (res_data) => {
+                        console.log(res_data)
+                        let table_rows = ""
+                        res_data.forEach(data => {
+                            table_rows += `
+                            <tr>
+                                <th scope="row">
+                                    <input type="checkbox" name="">
+                                </th>
+                                <td>${data.certification_standard}</td>
+                                <td>
+                                    <button class="alert alert-info" role="alert" style="border-radius: 25px;">
+                                        ${data.expected_response}
+                                    </button>
+                                </td>
+                                <td>${getLastEdited(data.updated_at)}</td>
+                            </tr>`
+                        })
+                        // Inject data to table
+                        $('tbody.certification-of-production').html(table_rows)
+                    }
+                })
+            }
+
+            function fetchMigrationFromMaterial() {
+                $.ajax({
+                    dataType: 'json',
+                    type: 'POST',
+                    data: jQuery.param({table: "migration_from_material"}),
+                    url: '../assets/php/ReadRequestSentences.php',
+                    success: (res_data) => {
+                        console.log(res_data)
+                        let table_rows = ""
+                        res_data.forEach(data => {
+                            table_rows += `
+                            <tr>
+                                <th scope="row">
+                                    <input type="checkbox" name="">
+                                </th>
+                                <td class="text-primary">${data.element}</td>
+                                <td>${data.test_standard}</td>
+                                <td>
+                                    <button class="alert alert-success" role="alert"
+                                        style="border-radius: 25px;">
+                                        ${data.expected_response}
+                                    </button>
+                                </td>
+                                <td>${getLastEdited(data.updated_at)}</td>
+                            </tr>`
+                        })
+                        // Inject data to table
+                        $('tbody.migration-from-material').html(table_rows)
+                    }
+                })
+            }
+
+            /**
+             * Get last edited.
+             * @param {string} _time - The time at which object was updated.
+             * @return {string}
+            */
+            function getLastEdited(_time) {
+                return moment(_time, "YYYY-MM-DD hh:mm:ss").fromNow()
+            }
 
         })
     </script>
