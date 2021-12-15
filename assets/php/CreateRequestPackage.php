@@ -8,6 +8,7 @@ $package_num = generate_request_package_number($connection);
 $request_id = generate_request_id($connection);
 $product = trim($data['selected_product']);
 $seller = trim($data['selected_seller']);
+$buyer = trim($data['selected_buyer']);
 $objects = serialize($data['objects']);
 
 // create request export

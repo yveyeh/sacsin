@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>SacsiN - Login</title>
+    <title>SacsiN | Login</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap Icons-->
@@ -55,8 +55,10 @@
                             <div class="d-flex">
                                 <div>
                                     <h3 class="mb-2">Login</h3>
-                                    <p class="text-secondary mb-0">Don't have an account?</p>
-                                    <a class="text-warning" href="">Create an account</a>
+                                    <p class="text-secondary mb-0">
+                                        To create an account please
+                                        <a class="text-warning" href="./contact-us">contact us.</a>
+                                    </p>
                                 </div>
                             </div>
                             <form action="#" class="login-form">
@@ -67,9 +69,10 @@
                                 <div class="form-group mt-4 mb-1">
                                     <p class="label mb-0" for="password">
                                         Password
-                                        <span class="pull-end"><a href="#">Forgot Password?</a></span>
+                                        <!-- <span class="pull-end"><a href="#">Forgot Password?</a></span> -->
                                     </p>
-                                    <input type="password" class="form-control" placeholder="Enter Password" autocomplete="on" required>
+                                    <input type="password" class="form-control" placeholder="Enter Password"
+                                        autocomplete="on" required>
                                 </div>
                                 <div class="form-group d-md-flex">
                                     <div class="w-50 text-left">
@@ -81,7 +84,8 @@
                                 </div>
                                 <div class="form-group mt-4">
                                     <select class="form-control" name="role" required>
-                                        <option value="" disabled selected hidden class="text-light">Select a role</option>
+                                        <option value="" disabled selected hidden class="text-light">Select a role
+                                        </option>
                                         <option value="buyer">Buyer</option>
                                         <option value="seller">Seller</option>
                                     </select>
@@ -96,14 +100,6 @@
                                     </button>
                                 </div>
                             </form>
-                            <!-- <p class="text-secondary">Or you can join with</p>
-                            <div class="social-auth">
-                                <a href="javascript:void(0)" class="btn btn-google"></a>
-                                <a href="javascript:void(0)" class="btn btn-facebook"></a>
-                                <a href="javascript:void(0)" class="btn btn-twitter"></a>
-                                <a href="javascript:void(0)" class="btn btn-instagram"></a>
-                                <a href="javascript:void(0)" class="btn btn-linkedin"></a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -120,7 +116,8 @@
                     </div>
                     <div id="footer-description">
                         <p class="text-white">
-                            Your way of exchanging industry independent Sustainability and Compliance Information within all tiers of your supply chain.
+                            Your way of exchanging industry independent Sustainability and Compliance Information within
+                            all tiers of your supply chain.
                         </p>
                     </div>
                     <div class="social-auth">
@@ -134,13 +131,20 @@
                 <div class="col-lg-6 col-md-6 mt-5">
                     <div id="footer-menu">
                         <ul>
+                            <li><a href="./" class="text-light">Home</a></li>
                             <li><a href="./about-us" class="text-light">About Us</a></li>
+                            <li><a href="./todays-challenge" class="text-light">The Challenge</a></li>
+                            <li><a href="./the-sacsin-project" class="text-light">SacsiN Demo</a></li>
                             <li><a href="./events" class="text-light"> Events</a></li>
                             <li><a href="./faq" class="text-light">FAQ</a></li>
                             <li><a href="./contact-us" class="text-light">Contact Us</a></li>
                         </ul>
                     </div>
-                    <div id="copyright" class="text-warning"></div>
+                    <div id="copyright" class="text-secondary">
+                        <script>
+                            document.write(`&copy; ${new Date().getFullYear()}, Design By HOP`)
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
@@ -153,7 +157,7 @@
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
-        $(document).ready(function($){
+        $(document).ready(function ($) {
             // Inject copyright markup
             $('#copyright').html(`&copy; ${new Date().getFullYear()}, Design By HOP`)
 
@@ -165,9 +169,15 @@
                     role: $('.login-form [name="role"]').val(),
                 }
                 // console.log(data)
-                data.role != null ? login(data) : $('.login-form [name="role"]').css({"color": "red", "border-color": "red"})
+                data.role != null ? login(data) : $('.login-form [name="role"]').css({
+                    "color": "red",
+                    "border-color": "red"
+                })
                 $('.login-form [name="role"]').change(() => {
-                    $('.login-form [name="role"]').css({"color": "#212529", "border-color": "#ced4da"})
+                    $('.login-form [name="role"]').css({
+                        "color": "#212529",
+                        "border-color": "#ced4da"
+                    })
                 })
             })
 
@@ -184,8 +194,10 @@
                             showLoader(2000)
                             setTimeout(() => {
                                 showLoginFeedback('success', 'Login successful.', 1500)
-                                redirect(1500, () => { // redirect to the respective home page "dashboards"
-                                    res_data[0].role === 'buyer' ? location.href = './buyer/' : location.href = './seller/'
+                                redirect(1500,
+                            () => { // redirect to the respective home page "dashboards"
+                                    res_data[0].role === 'buyer' ? location.href =
+                                        './buyer/' : location.href = './seller/'
                                 })
                             }, 2000)
                         } else {
@@ -198,7 +210,8 @@
                     error: (res) => {
                         showLoader(2000)
                         setTimeout(() => {
-                            showLoginFeedback('danger', 'Sorry! an error was encountered during login!', 3000)
+                            showLoginFeedback('danger',
+                                'Sorry! an error was encountered during login!', 3000)
                         }, 2000)
                     }
                 })
@@ -232,7 +245,7 @@
             function redirect(wait, callback = () => {}) {
                 setTimeout(
                     callback, // call the handler that is passed as parameter
-                wait) // wait for given length of time
+                    wait) // wait for given length of time
             }
 
             /**
